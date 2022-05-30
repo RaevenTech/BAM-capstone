@@ -1,4 +1,5 @@
 import React from "react";
+import { GiBangingGavel } from "react-icons/gi";
 
 import {
     NavDropdown,
@@ -13,42 +14,47 @@ import styles from "./NavbarLayout.module.css";
 function NavbarLayout() {
     return (
         <div>
-            <Navbar className={styles.navbarMain} expand="md">
+            <Navbar className={styles.navbarMain} variant="dark" expand="md">
                 <Navbar.Brand className={styles.logo} href="#home">
+                    <GiBangingGavel />
                     BAM
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="mr-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#link">Link</Nav.Link>
-                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                    <Nav className="ml-auto">
+                        {/*<Nav.Link href="#home"></Nav.Link>*/}
+                        {/*<Nav.Link href="#link"></Nav.Link>*/}
+                        <NavDropdown
+                            title="Get Started"
+                            id="basic-nav-dropdown"
+                        >
                             <NavDropdown.Item href="#action/3.1">
-                                Action
+                                Register
                             </NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">
-                                Another action
+                                Register to bid
                             </NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.3">
-                                Something
+                                Register for auction
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="#action/3.4">
-                                Separated link
+                                Login
                             </NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                     <Form inline>
                         <FormControl
+                            id="search-area"
                             type="text"
-                            placeholder="Search"
+                            placeholder="Destination"
                             className="mr-sm-2"
                         />
                         <Button
                             variant="outline-success"
                             className={styles.searchIcon}
                         >
-                            Search
+                            Find
                         </Button>
                     </Form>
                 </Navbar.Collapse>

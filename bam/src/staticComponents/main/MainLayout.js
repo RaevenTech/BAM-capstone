@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./MainLayout.module.css";
-import FooterLayout from "../footer/FooterLayout";
+//import FooterLayout from "../footer/FooterLayout";
 import NavbarLayout from "../navbar/NavbarLayout";
 
 const MainLayout = () => {
@@ -12,9 +12,7 @@ const MainLayout = () => {
                 </div>
             </header>
             <footer>
-                <div>
-                    <FooterLayout />
-                </div>
+                <div>{/*<FooterLayout />*/}</div>
             </footer>
         </section>
     );
