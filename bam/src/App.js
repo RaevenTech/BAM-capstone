@@ -1,10 +1,9 @@
 import "./App.css";
-
 import MainLayout from "./staticComponents/main/MainLayout";
 
 function App() {
     return (
-        <div className="App">
+        <div>
             <MainLayout />
         </div>
     );

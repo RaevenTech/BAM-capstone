@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:ital,wght@1,400;1,600&family=Prata&family=Sniglet:wght@800&family=Staatliches&family=Yanone+Kaffeesatz:wght@500&display=swap');
+
+.logo {
+    font-size: 2.5rem;
+    color:#c6ff2f !important;
+    font-family: 'Sniglet', cursive;
+}
+.navbarMain {
+    background: transparent;
+}
+
+.searchIcon {
+    color: #c6ff2f !important;
+    border-color: #c6ff2f !important;
+}
