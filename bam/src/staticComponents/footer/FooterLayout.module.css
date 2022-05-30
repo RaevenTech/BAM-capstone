@@ -1,0 +1,19 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(94, 94, 94, 0.598);
+ }
+ .copyright {
+    font-size: 0.8em;
+    text-align: center;
+    color: #444444;
+}
+.footerLinks {
+    color:#444444;
+    display: flex;
+    list-style-type:none;
+    justify-content: space-evenly;
+    margin-bottom: 0px;
+}
