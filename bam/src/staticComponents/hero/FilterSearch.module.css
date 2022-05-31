@@ -1,7 +1,7 @@
 
 .search {
     display:flex;
-    background-color: #fcfcfc00;
+    background-color: transparent;
     border-radius: 10px;
 }
 .container {
@@ -15,7 +15,7 @@
 label{
     font-size: 1.1rem;
     margin-bottom: 0px;
-    color: #c6ff2f;
+    color: #0d0e0d;
     text-transform: uppercase;
     font-weight: 200;
     font-family: 'Sniglet', cursive;
@@ -24,6 +24,16 @@ label{
 }
 input {
 border-radius: 10px;
+background-color:transparent;
+text-align:center;
+color: black;
+
+}
+input:focus{
+    outline: #c8ff2f7e;
+}
+input:hover {
+    background: #c8ff2f7c;
 }
 button {
     display: flex;
@@ -34,5 +44,11 @@ button {
     border-radius: 50px;
     width:100%;
     height:80%;
-    background-color: #c6ff2f ;
+    background-color: transparent ;
+    border: 1px solid #c6ff2f;
+    color:#000000b7;
+}
+button:hover{
+    background:#c8ff2f9c;
+    color:black;
 }

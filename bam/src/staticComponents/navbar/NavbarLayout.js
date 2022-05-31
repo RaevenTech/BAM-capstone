@@ -1,6 +1,6 @@
 import React from "react";
 import { GiBangingGavel } from "react-icons/gi";
-import { NavDropdown, Nav, Navbar, Button } from "react-bootstrap";
+import { NavDropdown, Nav, Navbar } from "react-bootstrap";
 import styles from "./NavbarLayout.module.css";
 
 function NavbarLayout() {
@@ -9,7 +9,7 @@ function NavbarLayout() {
             <Navbar className={styles.navbarMain} variant="dark" expand="md">
                 <Navbar.Brand className={styles.logo} href="#home">
                     <GiBangingGavel />
-                    BAM
+                    BAM!
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
