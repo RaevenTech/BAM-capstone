@@ -16,7 +16,7 @@ const FilterSearch = () => {
                     <label htmlFor="">Check-out</label>
                     <input type="date" />
                 </div>
-                <button>Explore Now</button>
+                <button>Find listing</button>
             </div>
         </>
     );

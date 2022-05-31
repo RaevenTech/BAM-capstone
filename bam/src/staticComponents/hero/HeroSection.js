@@ -11,15 +11,17 @@ const HeroSection = () => {
                     alt="Gallery"
                 />
             </div>
-            <div className={styles.title}>
-                <h1>Like it? Bid for it!</h1>
-                <h3>Online holdiay auction</h3>
-                <p>
-                    Find your next vacation, weekend away or travel for
-                    business.{" "}
-                </p>
+            <div className={styles.content}>
+                <div className={styles.title}>
+                    <h1>Like it? Bid for it!</h1>
+                    <h3>Online holdiay auction</h3>
+                    <p>
+                        Find your next vacation, weekend away or travel for
+                        business.{" "}
+                    </p>
+                </div>
+                <FilterSearch />
             </div>
-            <FilterSearch />
         </section>
     );
 };
