@@ -7,7 +7,7 @@ const HeroSection = () => {
         <section id="hero">
             <div className={styles.background}>
                 <img
-                    src="https://thumbs.dreamstime.com/b/collage-travel-photos-different-countries-collage-international-landmarks-popular-travel-destinations-photos-108973833.jpg"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/World_map_blank_without_borders.svg/4378px-World_map_blank_without_borders.svg.png"
                     alt="Gallery"
                 />
             </div>
@@ -15,8 +15,8 @@ const HeroSection = () => {
                 <div className={styles.title}>
                     <h1>Like it? Bid for it!</h1>
                     <p>
-                        Find your next vacation destination. Look fora weekend
-                        away or maybe just for business.{" "}
+                        Find your next vacation destination. Quick weekend away
+                        or maybe just for business?{" "}
                     </p>
                 </div>
                 <FilterSearch />

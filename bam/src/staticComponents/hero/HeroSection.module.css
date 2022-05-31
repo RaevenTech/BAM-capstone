@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:ital,wght@1,400;1,600&family=Prata&family=Sniglet:wght@800&family=Staatliches&family=Yanone+Kaffeesatz:wght@500&display=swap');
+
 section {
     position: relative;
     width: 100%;
@@ -23,14 +25,17 @@ section {
     gap:1rem;
 }
 .title {
-    color:azure;
+    color:#ffffff !important;
 }
 h1 {
-    font-size:3rem;
-    letter-spacing: 0.2rem;
+    font-size:2rem;
     font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Sniglet', cursive;
+
 }
 p {
     text-align: center;
     font-size: 1.2rem;
+    font-weight: 500;
 }

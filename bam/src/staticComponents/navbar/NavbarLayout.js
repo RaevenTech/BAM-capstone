@@ -1,14 +1,6 @@
 import React from "react";
 import { GiBangingGavel } from "react-icons/gi";
-
-import {
-    NavDropdown,
-    Nav,
-    Navbar,
-    Form,
-    FormControl,
-    Button,
-} from "react-bootstrap";
+import { NavDropdown, Nav, Navbar, Button } from "react-bootstrap";
 import styles from "./NavbarLayout.module.css";
 
 function NavbarLayout() {
@@ -43,20 +35,6 @@ function NavbarLayout() {
                             </NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
-                    <Form inline>
-                        <FormControl
-                            id="search-area"
-                            type="text"
-                            placeholder="Destination"
-                            className="mr-sm-2"
-                        />
-                        <Button
-                            variant="outline-success"
-                            className={styles.searchIcon}
-                        >
-                            Find
-                        </Button>
-                    </Form>
                 </Navbar.Collapse>
             </Navbar>
         </div>

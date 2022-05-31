@@ -1,0 +1,38 @@
+
+.search {
+    display:flex;
+    background-color: #fcfcfc00;
+    border-radius: 10px;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.1rem;
+    
+}
+label{
+    font-size: 1.1rem;
+    margin-bottom: 0px;
+    color: #c6ff2f;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-family: 'Sniglet', cursive;
+    
+
+}
+input {
+border-radius: 10px;
+}
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 6px;
+    border-radius: 50px;
+    width:100%;
+    height:80%;
+    background-color: #c6ff2f ;
+}
