@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:ital,wght@1,400;1,600&family=Prata&family=Sniglet:wght@800&family=Staatliches&family=Yanone+Kaffeesatz:wght@500&display=swap');
 
-
+.container {
+    position:sticky;
+    z-index: 2;
+}
 .logo {
     margin:0px;
     font-size: 5.5rem;

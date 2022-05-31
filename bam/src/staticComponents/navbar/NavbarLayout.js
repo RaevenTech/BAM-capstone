@@ -13,7 +13,7 @@ import styles from "./NavbarLayout.module.css";
 
 function NavbarLayout() {
     return (
-        <div>
+        <div className={styles.container}>
             <Navbar className={styles.navbarMain} variant="dark" expand="md">
                 <Navbar.Brand className={styles.logo} href="#home">
                     <GiBangingGavel />

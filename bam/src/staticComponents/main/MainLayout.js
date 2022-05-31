@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./MainLayout.module.css";
 import FooterLayout from "../footer/FooterLayout";
 import NavbarLayout from "../navbar/NavbarLayout";
+import HeroSection from "../hero/HeroSection";
 
 const MainLayout = () => {
     return (
@@ -11,6 +12,7 @@ const MainLayout = () => {
                     <NavbarLayout />
                 </div>
             </header>
+            <HeroSection />
             <footer>
                 <div>
                     <FooterLayout />
