@@ -9,10 +9,10 @@ html{
 body {
  
   margin: 0rem 1rem 1rem 1rem;
-  background: rgb(74, 74, 74);
-  background: linear-gradient(180deg, #424242 6%, #858a7e 84%, #c6ff2f 100%);
+  background: rgb(243, 242, 240);
+  background: linear-gradient(180deg, #424242 6%, #858a7e00 84%, #c6ff2f 100%);
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 100%;
   font-family: 'Poppins', sans-serif;
 }
 

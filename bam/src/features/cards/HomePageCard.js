@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./HomePageCard.module.css";
+import { HiUserGroup } from "react-icons/hi";
 
 const HomePageCard = () => {
     const data = [
@@ -33,7 +34,7 @@ const HomePageCard = () => {
             image: "https://www.planetware.com/wpimages/2019/02/europe-top-places-to-visit-summer-reykjavik-iceland.jpg",
             title: "Mother Nature's works of art",
             location: "Reykjavik, Iceland",
-            MaxGuests: 8,
+            maxGuests: 8,
             rules: "Perfect for families or couples even backpackers",
             description:
                 "Colorful fields of greens and flowers, blue skies juxtaposed against the Blue Lagoon healing waters",
@@ -41,7 +42,30 @@ const HomePageCard = () => {
     ];
     return (
         <section id="homeCard">
-            <div className={styles.card}>HomePageCard</div>
+            {data.map((card, i) => {
+                return (
+                    <section className={styles.card}>
+                        <div key={i} classname={styles.cardImage}>
+                            <img src={card.image} alt={card.location} />
+                        </div>
+                        <h3>{card.title}</h3>
+                        <p>{card.location}</p>
+                        <div className={styles.guests}>
+                            max
+                            <HiUserGroup />
+                            {card.maxGuests}
+                        </div>
+                        <div className={styles.description}>
+                            <label
+                                for="description"
+                                type="text"
+                                maxlength="250"
+                            ></label>
+                            <p>{card.description}</p>
+                        </div>
+                    </section>
+                );
+            })}
         </section>
     );
 };

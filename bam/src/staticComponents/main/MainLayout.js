@@ -3,16 +3,33 @@ import styles from "./MainLayout.module.css";
 import FooterLayout from "../footer/FooterLayout";
 import NavbarLayout from "../navbar/NavbarLayout";
 import HeroSection from "../hero/HeroSection";
+import HomePageCard from "../../features/cards/HomePageCard";
 
 const MainLayout = () => {
     return (
-        <section>
+        <section id="home">
             <header className="fluid">
                 <div className={styles.navbar}>
                     <NavbarLayout />
                 </div>
             </header>
-            <HeroSection />
+            <section className={styles.hero}>
+                <HeroSection />
+            </section>
+            <section className={styles.main}>
+                <div className="container-fluid pl-0">
+                    <div className="row">
+                        <div className="col-8">
+                            <div className={styles.mainCards}>
+                                <HomePageCard />
+                            </div>
+                        </div>
+                        <div className="col-4">
+                            <div className={styles.newList}>new listing</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <footer>
                 <div>
                     <FooterLayout />
