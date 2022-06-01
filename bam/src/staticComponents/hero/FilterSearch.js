@@ -17,8 +17,8 @@ const FilterSearch = () => {
                     <label htmlFor="">Check-out</label>
                     <input type="date" />
                 </div>
-                <button>Search</button>
             </div>
+            <button>Search</button>
         </>
     );
 };
