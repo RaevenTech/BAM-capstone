@@ -1,14 +1,26 @@
 .card {
+    position: relative;
     background: white;
     margin-bottom: 1.5rem;
     border-radius: 15px;
-    box-shadow: 2px 2px 3px ;
+    border: 1px solid rgb(212, 211, 211);
+   
 }
 .cardImage {
-    position: relative;
     padding: 5px 8px;
+    height: 150px;
 } 
 .new_list_btns {
     display:flex;
     justify-content: space-evenly;
+}
+.badge {
+    position: absolute;
+    top:0;
+    z-index: 4;
+    font-weight: 200;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    margin-top: 0.4rem;
+    margin-left:0.5rem;
 }

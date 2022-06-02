@@ -17,17 +17,17 @@ const NewListings = () => {
         {
             image: "https://a0.muscache.com/im/pictures/c5fce685-fff6-4c14-901a-e35a89353a6e.jpg?im_w=720",
             location: "Camps Bay Beach, Cape Town",
-            currentbid: 50,
+            currentbid: 25,
         },
         {
             image: "https://a0.muscache.com/im/pictures/d500cce2-6ff0-445f-bd29-1fc5f974c684.jpg?im_w=720",
             location: "Faro,Portugal",
-            currentbid: 50,
+            currentbid: 45,
         },
         {
             image: "https://wander-lush.org/wp-content/uploads/2021/01/Best-Airbnbs-in-Italy-Chapel-Venice.jpg",
             location: "Venice, Italy",
-            currentbid: 50,
+            currentbid: 100,
         },
     ];
 
@@ -42,11 +42,18 @@ const NewListings = () => {
                             alt="treehouse"
                         />
                         <h4 className={styles.title}>{card.location}</h4>
-                        <Badge className={styles.badge} variant="warning">
+                        <Badge
+                            id="start_bid_badge"
+                            className={styles.badge}
+                            variant="primary"
+                        >
                             €{card.currentbid}
                         </Badge>
                         <div className={styles.new_list_btns}>
-                            <button className={styles.bid_btn}> Add Bid</button>
+                            <button className={styles.bid_btn}>
+                                {" "}
+                                Opening bid
+                            </button>
                             <button className={styles.fav_btn}>Watch</button>
                         </div>
                     </div>
