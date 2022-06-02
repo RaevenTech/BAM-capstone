@@ -5,9 +5,9 @@
 }
 .logo {
     margin:0px;
-    font-size: 5.5rem;
+    font-size: 5rem;
     font-weight: 800;
-    color:#c6ff2f !important;
+    color:#0d62a3 !important;
     font-family: 'Sniglet', cursive;
 }
 .navbarMain {
@@ -15,11 +15,14 @@
     height: 80px;
 }
 .searchIcon {
-    color: #c6ff2f !important;
-    border-color: #c6ff2f !important;
+    color: #0d62a3 !important;
+    border-color: #0d62a3 !important;
 }
 #basic-nav-dropdown {
     padding-left: 0px !important;
+}
+hr {
+    margin-top: 0px;
 }
 @media only screen and (max-width: 425px) {
     .logo{

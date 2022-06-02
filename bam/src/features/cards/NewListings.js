@@ -45,9 +45,10 @@ const NewListings = () => {
                         <Badge className={styles.badge} variant="warning">
                             €{card.currentbid}
                         </Badge>
-                        <button className={styles.bid_btn} variant="success">
-                            Bid
-                        </button>
+                        <div className={styles.new_list_btns}>
+                            <button className={styles.bid_btn}> Add Bid</button>
+                            <button className={styles.fav_btn}>Watch</button>
+                        </div>
                     </div>
                 );
             })}

@@ -2,9 +2,13 @@
     background: white;
     margin-bottom: 1.5rem;
     border-radius: 15px;
-    box-decoration-break: slice;
+    box-shadow: 2px 2px 3px ;
 }
 .cardImage {
     position: relative;
     padding: 5px 8px;
 } 
+.new_list_btns {
+    display:flex;
+    justify-content: space-evenly;
+}

@@ -27,7 +27,7 @@ const MainLayout = () => {
                                 <HomePageCard />
                             </div>
                         </div>
-                        <div className="col-4">
+                        <div className=" col-4">
                             <h2>New listing</h2>
                             <hr />
                             <div className={styles.newList}>

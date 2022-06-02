@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./HomePageCard.module.css";
-import { HiUserGroup } from "react-icons/hi";
 
 const HomePageCard = () => {
     const data = [
@@ -9,7 +8,7 @@ const HomePageCard = () => {
             title: "European adventure destination",
             location: "Sao Miguel Island, part of the Azores",
             maxGuests: 0,
-            currentBid: 0,
+            currentBid: 15,
             description: "volcanic islands perfect for adventure seekers",
         },
         {
@@ -17,7 +16,7 @@ const HomePageCard = () => {
             title: "Beautiful Beaches and Blue water",
             location: "Algarve,Portugal",
             maxGuests: 0,
-            currentBid: 0,
+            currentBid: 111,
             description:
                 "Welcome to one of the most wonderful regions of Portugal with a mild and sunny climate all year round!",
         },
@@ -26,7 +25,7 @@ const HomePageCard = () => {
             title: "Dubrovnik's old-world beauty",
             location: "Dubrovnik, Croatia",
             maxGuests: 0,
-            currentBid: 0,
+            currentBid: 67,
             description:
                 "Croatian gem is one of the most stunning cities on the Dalmatian Coast, and one of the best places to visit in Europe in summer",
         },
@@ -35,7 +34,7 @@ const HomePageCard = () => {
             title: "Mother Nature's works of art",
             location: "Reykjavik, Iceland",
             maxGuests: 0,
-            currentBid: 0,
+            currentBid: 35,
             description:
                 "Colorful fields of greens and flowers, blue skies juxtaposed against the Blue Lagoon healing waters",
         },
@@ -56,13 +55,9 @@ const HomePageCard = () => {
                             <p>{card.description}</p>
                         </div>
                         <div className={styles.guestsTimer}>
-                            <div className={styles.guests}>
-                                <div className={styles.icon}>
-                                    <HiUserGroup />
-                                </div>
-                                <span className="max">{card.maxGuests}</span>
-                            </div>
-                            <h2>€{card.currentBid}</h2>
+                            <button className={styles.danger_btn}>
+                                Add your bid - €{card.currentBid}.00
+                            </button>
                             <div className={styles.timer}>
                                 Closing: 00:00:00
                             </div>

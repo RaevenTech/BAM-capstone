@@ -7,6 +7,7 @@ const HeroSection = () => {
         <section id="hero">
             <div className={styles.background}>
                 <img
+                    className={styles.image}
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/World_map_blank_without_borders.svg/4378px-World_map_blank_without_borders.svg.png"
                     alt="Gallery"
                 />
