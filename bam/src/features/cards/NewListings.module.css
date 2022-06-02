@@ -1,0 +1,10 @@
+.card {
+    background: white;
+    margin-bottom: 1.5rem;
+    border-radius: 15px;
+    box-decoration-break: slice;
+}
+.cardImage {
+    position: relative;
+    padding: 5px 8px;
+} 
