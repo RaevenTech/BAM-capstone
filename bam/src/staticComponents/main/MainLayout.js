@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./MainLayout.module.css";
-import FooterLayout from "../footer/FooterLayout";
 import HeroSection from "../hero/HeroSection";
 import HomePageCard from "../../features/cards/HomePageCard";
 import NewListings from "../../features/cards/NewListings";
