@@ -12,7 +12,7 @@ const RegisterListing = () => {
 
     return (
         <div>
-            <Button onClick={handleShow}>Add to auction</Button>
+            <Button onClick={handleShow}>Sell on auction</Button>
             <Modal
                 show={show}
                 onHide={handleClose}
@@ -21,7 +21,7 @@ const RegisterListing = () => {
                 centered
             >
                 <Modal.Header closeButton>
-                    <Modal.Title>List to sell</Modal.Title>
+                    <Modal.Title>Register to sell at auction</Modal.Title>
                 </Modal.Header>
 
                 <Modal.Body>
