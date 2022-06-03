@@ -1,6 +1,6 @@
 import React from "react";
 import { GiBangingGavel } from "react-icons/gi";
-import { NavDropdown, Nav, Navbar } from "react-bootstrap";
+import { Button, Nav, Navbar } from "react-bootstrap";
 import styles from "./NavbarLayout.module.css";
 
 function NavbarLayout() {
@@ -16,24 +16,7 @@ function NavbarLayout() {
                     <Nav className="ml-auto">
                         {/*<Nav.Link href="#home"></Nav.Link>*/}
                         {/*<Nav.Link href="#link"></Nav.Link>*/}
-                        <NavDropdown
-                            title="Get Started"
-                            id="basic-nav-dropdown"
-                        >
-                            <NavDropdown.Item href="#action/3.1">
-                                Register
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">
-                                Register to bid
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">
-                                Register for auction
-                            </NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">
-                                Login
-                            </NavDropdown.Item>
-                        </NavDropdown>
+                        <Button>Register</Button>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
