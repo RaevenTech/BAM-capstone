@@ -25,10 +25,10 @@ const Register = () => {
 
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
-                        Close
+                        Cancel
                     </Button>
                     <Button variant="primary" onClick={handleClose}>
-                        Submit
+                        Get started
                     </Button>
                 </Modal.Footer>
             </Modal>
