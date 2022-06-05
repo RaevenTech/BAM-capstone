@@ -58,7 +58,7 @@ const HomePageCard = () => {
         },
     ];
     return (
-        <div id="homeCard" className="row">
+        <div id="homeCard" className={styles.card}>
             {data.map((card, i) => (
                 <div
                     className={`flex-container row mb-2 ${
