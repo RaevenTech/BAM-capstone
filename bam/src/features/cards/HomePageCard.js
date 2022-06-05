@@ -58,36 +58,37 @@ const HomePageCard = () => {
         },
     ];
     return (
-        <div id="homeCard">
-            {data.map((card, i) => {
-                return (
-                    <div className="flex-container row mb-2" key={[i]}>
-                        <div className="col-5">
-                            <img
-                                className={styles.image}
-                                src={card.image}
-                                alt={card.location}
-                            />
-                        </div>
-                        <div className="col-7">
-                            <div className={styles.content}>
-                                <h3 className={styles.card_title}>
-                                    {card.title}
-                                </h3>
-                                <p>{card.location}</p>
-                                <div className={styles.final_bids}>
-                                    <button className={styles.danger_btn}>
-                                        Currnent Bid: € {card.currentBid}.00
-                                    </button>
-                                    <div className={styles.timer}>
-                                        <small>Auction ends in: 00:00:00</small>
-                                    </div>
+        <div id="homeCard" className="row">
+            {data.map((card, i) => (
+                <div
+                    className={`flex-container row mb-2 ${
+                        i && 2 === 0 ? "row" : "row-reverse"
+                    }`}
+                    key={[i]}
+                >
+                    <div className="col-5">
+                        <img
+                            className={styles.image}
+                            src={card.image}
+                            alt={card.location}
+                        />
+                    </div>
+                    <div className="col-7">
+                        <div className={styles.content}>
+                            <h3 className={styles.card_title}>{card.title}</h3>
+                            <p>{card.location}</p>
+                            <div className={styles.final_bids}>
+                                <button className={styles.danger_btn}>
+                                    Currnent Bid: € {card.currentBid}.00
+                                </button>
+                                <div className={styles.timer}>
+                                    <small>Auction ends in: 00:00:00</small>
                                 </div>
                             </div>
                         </div>
                     </div>
-                );
-            })}
+                </div>
+            ))}
         </div>
     );
 };
