@@ -3,6 +3,8 @@
     background: whitesmoke;
     border-radius: 15px;
     box-shadow: 1px 3px 5px;
+    display: flex;
+    flex-direction: row;
 }
 .cardImage {
     position: relative;
