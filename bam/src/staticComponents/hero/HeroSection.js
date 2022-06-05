@@ -4,7 +4,7 @@ import styles from "./HeroSection.module.css";
 
 const HeroSection = () => {
     return (
-        <section id="hero">
+        <section id="hero" className={styles.hero}>
             <div className={styles.background}>
                 <img
                     className={styles.image}
@@ -14,8 +14,8 @@ const HeroSection = () => {
             </div>
             <div className={styles.content}>
                 <div className={styles.title}>
-                    <h1>Like it? Bid for it!</h1>
-                    <p>
+                    <h1 className={styles.title}>Like it? Bid for it!</h1>
+                    <p className={styles.subtitle}>
                         Find your next vacation destination. Quick weekend away
                         or maybe just for business?{" "}
                     </p>

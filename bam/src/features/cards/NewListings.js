@@ -42,17 +42,13 @@ const NewListings = () => {
                             alt="treehouse"
                         />
                         <h4 className={styles.title}>{card.location}</h4>
-                        <Badge
-                            id="start_bid_badge"
-                            className={styles.badge}
-                            variant="primary"
-                        >
+                        <Badge id="start_bid_badge" className={styles.badge}>
                             €{card.currentbid}
                         </Badge>
                         <div className={styles.new_list_btns}>
                             <button className={styles.bid_btn}>
                                 {" "}
-                                Opening bid
+                                Place bid
                             </button>
                             <button className={styles.fav_btn}>Watch</button>
                         </div>

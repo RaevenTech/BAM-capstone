@@ -27,7 +27,25 @@ const HomePageCard = () => {
             maxGuests: 0,
             currentBid: 67,
             description:
-                "Croatian gem is one of the most stunning cities on the Dalmatian Coast, and one of the best places to visit in Europe in summer",
+                "Croatian gem is one of the most stunning cities on the Dalmatian Coast",
+        },
+        {
+            image: "https://conteudo.imguol.com.br/c/noticias/35/2021/05/03/casa-de-vidro-na-mantiqueira-disponivel-para-aluguel-pelo-airbnb-1620072331054_v2_1x1.jpg",
+            title: "Relax in the mountains",
+            location: "french, alpes",
+            maxGuests: 0,
+            currentBid: 35,
+            description:
+                "where nature meets your soul, explore the wonders of the forest",
+        },
+        {
+            image: "https://news.airbnb.com/wp-content/uploads/sites/4/2018/08/10-airship-002-min.jpg",
+            title: "Scotland HighLands, United Kingdom",
+            location: "Dubrovnik, Croatia",
+            maxGuests: 0,
+            currentBid: 67,
+            description:
+                "Yruly unique environment in which to relax and unwind",
         },
         {
             image: "https://www.planetware.com/wpimages/2019/02/europe-top-places-to-visit-summer-reykjavik-iceland.jpg",
@@ -40,32 +58,37 @@ const HomePageCard = () => {
         },
     ];
     return (
-        <section id="homeCard">
+        <div id="homeCard">
             {data.map((card, i) => {
                 return (
-                    <section key={[i]} className={styles.card}>
-                        <div className={styles.cardImage}>
-                            <img src={card.image} alt={card.location} />
-                            <h3>{card.title}</h3>
+                    <div className="flex-container row mb-2" key={[i]}>
+                        <div className="col-5">
+                            <img
+                                className={styles.image}
+                                src={card.image}
+                                alt={card.location}
+                            />
                         </div>
-                        <p className={styles.location}>
-                            <small>{card.location}</small>
-                        </p>
-                        <div className={styles.description}>
-                            <p>{card.description}</p>
-                        </div>
-                        <div className={styles.guestsTimer}>
-                            <button className={styles.danger_btn}>
-                                Add your bid - €{card.currentBid}.00
-                            </button>
-                            <div className={styles.timer}>
-                                Closing: 00:00:00
+                        <div className="col-7">
+                            <div className={styles.content}>
+                                <h3 className={styles.card_title}>
+                                    {card.title}
+                                </h3>
+                                <p>{card.location}</p>
+                                <div className={styles.final_bids}>
+                                    <button className={styles.danger_btn}>
+                                        Currnent Bid: € {card.currentBid}.00
+                                    </button>
+                                    <div className={styles.timer}>
+                                        <small>Auction ends in: 00:00:00</small>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </section>
+                    </div>
                 );
             })}
-        </section>
+        </div>
     );
 };
 

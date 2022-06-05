@@ -1,45 +1,25 @@
-.card {
-    position: relative;
-    background: whitesmoke;
-    border-radius: 15px;
-    box-shadow: 1px 3px 5px;
-    display: flex;
-    flex-direction: row;
-}
-.cardImage {
-    position: relative;
-    padding: 5px 8px;
-    border-radius: 15px;
-    box-shadow: 1px 1px 3px;
-}
-h3 {
+.image {
     height: 100%;
     width: 100%;
-    position: absolute;
-    top: 0;
-    z-index: 2;
     text-align: center;
     display:flex;
     flex-direction: column;
-    padding-top: 20px;
-    color: whitesmoke;
-}
-.guestsTimer {
-    display:flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    text-align: center;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    max-height: 200px;
 }
-span.max {
-    align-items: baseline;
-    padding-left: 5px;
+.content {
+    display: flex;
+    flex-direction: column;
+    
 }
-.description {
-    padding-left:1rem;
-    padding-right: 1rem;
+.card_title {
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 600;
 }
+
 .danger_btn { 
     border-radius: 10px;
     margin-bottom: 5px;
@@ -51,4 +31,14 @@ span.max {
 .danger_btn:hover {
     color: black;
     background-color:rgba(229, 0, 0, 0.763);
+}
+.final_bids {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-end;
+    position: sticky;
+    bottom: 0;
+    left:0
+
 }

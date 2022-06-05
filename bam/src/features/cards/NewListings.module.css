@@ -1,26 +1,58 @@
 .card {
     position: relative;
-    background: white;
-    margin-bottom: 1.5rem;
-    border-radius: 15px;
+    margin-bottom: 0.5rem;
     border: 1px solid rgb(212, 211, 211);
    
 }
-.cardImage {
-    padding: 5px 8px;
-    height: 150px;
-} 
-.new_list_btns {
+.cardImage { 
+    height: 100%;
+    width: 100%;
+    text-align: center;
     display:flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+}
+.title {
+    font-size: 1rem;
+    padding-left: 5px;
 }
 .badge {
     position: absolute;
+    background-color: #0d62a3;
+    color: azure;
     top:0;
     z-index: 4;
     font-weight: 200;
-    font-size: 1.5rem;
+    font-size: 1rem;
     border-radius: 10px;
     margin-top: 0.4rem;
     margin-left:0.5rem;
+}
+.new_list_btns {
+    text-align: center;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.bid_btn {
+    background: rgba(56, 197, 0, 0.556);
+    border:1px solid rgba(56, 197, 0, 0);
+    
+    border-radius: 5px;
+}
+.bid_btn:hover {
+    background: rgba(72, 255, 0, 0.556);
+    border: 1px solid rgba(72, 255, 0, 0.365);
+}
+.fav_btn {
+    background: rgb(254, 254, 4);
+    border: 1px solid rgba(255, 255, 0, 0);
+    padding-top: 2px;
+    border-radius: 5px;
 }

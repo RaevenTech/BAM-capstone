@@ -20,18 +20,18 @@
     font-weight: 400;
     
 }
-input {
+.input {
 border-radius: 10px;
 background-color:transparent;
 text-align:center;
 color: black;
 
 }
-input:focus{
+.input:focus{
     outline: #0d62a3;
 }
-input:hover {
-    background: #0d62a3;
+.input:hover {
+    background: #c0c9cf;
 }
 .searchBtn {
     display: flex;
