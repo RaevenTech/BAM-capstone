@@ -1,17 +1,16 @@
 import "./App.css";
-import ModalLayout from "./features/modal/ModalLayout";
-import FooterLayout from "./staticComponents/footer/FooterLayout";
-import NavbarLayout from "./staticComponents/navbar/NavbarLayout";
-import MainLayout from "./staticComponents/main/MainLayout";
+import MainLayout from "./homeComponents/main/MainLayout";
+import UserPage from "./userComponets/buyer/UserPage";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
     return (
-        <div>
-            <NavbarLayout />
-            <ModalLayout />
-            <MainLayout />
-            <FooterLayout />
-        </div>
+        <>
+            <Routes>
+                <Route path="/" element={<MainLayout />} />
+                <Route path="userPage" element={<UserPage />} />
+            </Routes>
+        </>
     );
 }
 

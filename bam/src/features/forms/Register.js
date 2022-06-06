@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Modal, Button, Form } from "react-bootstrap";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
@@ -27,14 +28,19 @@ const Register = () => {
                 <Modal.Body>
                     {" "}
                     <Form>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3">
                             <Form.Label>First Name</Form.Label>
                             <Form.Control
                                 type="text"
                                 placeholder=" First Name"
+                                required
                             />
                             <Form.Label>Last Name</Form.Label>
-                            <Form.Control type="text" placeholder="Last Name" />
+                            <Form.Control
+                                type="text"
+                                placeholder="Last Name"
+                                required
+                            />
                             <Form.Label>Phone</Form.Label>
                             <Form.Control
                                 type="number"
@@ -49,6 +55,7 @@ const Register = () => {
                             <Form.Control
                                 type="email"
                                 placeholder="Enter valid email"
+                                required
                             />
                         </Form.Group>
                         <Form.Group
@@ -59,23 +66,29 @@ const Register = () => {
                             <Form.Control
                                 type="password"
                                 placeholder="Password"
+                                required
                             />
                         </Form.Group>
                         <Form.Group
                             className="mb-3"
-                            controlId="formBasicPassword"
+                            controlId="formBasicPassword2"
                         >
                             <Form.Label> Verify Password</Form.Label>
                             <Form.Control
                                 type="password"
                                 placeholder="Password"
+                                required
                             />
                         </Form.Group>
                         <Form.Group
                             className="mb-3"
                             controlId="formBasicCheckbox"
                         >
-                            <Form.Check type="checkbox" label="Check me out" />
+                            <Form.Check
+                                type="checkbox"
+                                label="Terms and conditions"
+                                required
+                            />
                         </Form.Group>
                     </Form>
                 </Modal.Body>
@@ -84,9 +97,11 @@ const Register = () => {
                     <Button variant="secondary" onClick={handleClose}>
                         Cancel
                     </Button>
-                    <Button variant="primary" onClick={handleClose}>
-                        Get started
-                    </Button>
+                    <Link to="/Userpage">
+                        <Button variant="primary" onClick={handleClose}>
+                            Get started
+                        </Button>
+                    </Link>
                 </Modal.Footer>
             </Modal>
         </div>

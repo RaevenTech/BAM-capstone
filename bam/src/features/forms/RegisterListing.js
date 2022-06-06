@@ -26,7 +26,7 @@ const RegisterListing = () => {
 
                 <Modal.Body>
                     <Form>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3">
                             <Form.Label>First Name</Form.Label>
                             <Form.Control type="text" placeholder="Name" />
                             <Form.Label>Last Name</Form.Label>
@@ -56,7 +56,7 @@ const RegisterListing = () => {
                         </Form.Group>
                         <Form.Group
                             className="mb-3"
-                            controlId="formBasicPassword"
+                            controlId="formBasicPassword2"
                         >
                             <Form.Label> Verify Password</Form.Label>
                             <Form.Control

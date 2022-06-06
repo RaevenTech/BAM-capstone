@@ -30,7 +30,7 @@ const HomePageCard = () => {
                 "Croatian gem is one of the most stunning cities on the Dalmatian Coast",
         },
         {
-            image: "https://conteudo.imguol.com.br/c/noticias/35/2021/05/03/casa-de-vidro-na-mantiqueira-disponivel-para-aluguel-pelo-airbnb-1620072331054_v2_1x1.jpg",
+            image: "https://static.trip101.com/paragraph_media/pictures/001/218/300/large/9521fe08-be0d-4f30-9fd3-02487e16f904.jpg?1528771783",
             title: "Relax in the mountains",
             location: "french, alpes",
             maxGuests: 0,
@@ -81,7 +81,12 @@ const HomePageCard = () => {
                                     Currnent Bid: € {card.currentBid}.00
                                 </button>
                                 <div className={styles.timer}>
-                                    <small>Auction ends in: 00:00:00</small>
+                                    <small>
+                                        Bid close:{" "}
+                                        <span className={styles.counter}>
+                                            00:00:00
+                                        </span>
+                                    </small>
                                 </div>
                             </div>
                         </div>

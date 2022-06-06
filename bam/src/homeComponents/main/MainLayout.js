@@ -1,15 +1,20 @@
 import React from "react";
 import styles from "./MainLayout.module.css";
 import HeroSection from "../hero/HeroSection";
-import HomePageCard from "../../features/cards/HomePageCard";
-import NewListings from "../../features/cards/NewListings";
+import NavbarLayout from "../navbar/NavbarLayout";
+import FooterLayout from "../footer/FooterLayout";
+import ModalLayout from "../../features/modal/ModalLayout";
+import HomePageCard from "../../features/cards/homepage/HomePageCard";
+import NewListings from "../../features/cards/homepage/NewListings";
 
 const MainLayout = () => {
     return (
         <section id="home">
+            <NavbarLayout />
             <section>
                 <HeroSection />
             </section>
+            <ModalLayout />
             <section className={styles.main}>
                 <div className="container-fluid pl-0">
                     <div className="row">
@@ -34,6 +39,7 @@ const MainLayout = () => {
                     </div>
                 </div>
             </section>
+            <FooterLayout />
         </section>
     );
 };
