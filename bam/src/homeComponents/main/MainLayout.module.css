@@ -3,7 +3,6 @@
 }
 .title {
     display: flex;
-    font-size: 5rem;
     justify-content: center;
     flex-direction: column;
     align-items: center;

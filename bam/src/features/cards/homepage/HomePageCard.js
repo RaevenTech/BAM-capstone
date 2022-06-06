@@ -61,9 +61,8 @@ const HomePageCard = () => {
         <div id="homeCard" className={styles.card}>
             {data.map((card, i) => (
                 <div
-                    className={`flex-container row mb-2 ${
-                        i && 2 === 0 ? "row" : "row-reverse"
-                    }`}
+                    className={`flex-container row mb-2 
+                    ${i % 2 === 0 ? "row" : "row-reverse"}`}
                     key={[i]}
                 >
                     <div className="col-5">
