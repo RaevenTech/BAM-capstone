@@ -5,5 +5,8 @@
   text-align: center;
 
 }
-
+.works{
+  display:flex;
+  flex-direction: row-reverse;
+}
 

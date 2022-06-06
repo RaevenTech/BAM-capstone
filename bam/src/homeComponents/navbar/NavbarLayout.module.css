@@ -24,6 +24,12 @@
 hr {
     margin-top: 0px;
 }
+.login {
+    padding: 5px
+}
+.login_body {
+    padding: 10px;
+}
 @media only screen and (max-width: 425px) {
     .logo{
         font-size: 3em;

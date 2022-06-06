@@ -1,3 +1,4 @@
+
 .image {
     height: 100%;
     width: 100%;
@@ -10,16 +11,22 @@
 }
 .content {
     display: flex;
+    height: 100%;
     flex-direction: column;
-    
+}
+.content:hover {
+    background: rgba(128, 128, 128, 0.112);
 }
 .card_title {
     letter-spacing: 1px;
     font-size: 1.5rem;
     line-height: 1.5rem;
     font-weight: 600;
+    padding-left: 5px;
 }
-
+.location {
+    padding-left: 5px;
+}
 .danger_btn { 
     border-radius: 10px;
     margin-bottom: 5px;
@@ -37,6 +44,7 @@
     display: flex;
     justify-content: space-between;
     align-content: flex-end;
+    padding: 0px 5px;
 }
 
 .counter {

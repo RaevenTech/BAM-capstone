@@ -61,8 +61,9 @@ const HomePageCard = () => {
         <div id="homeCard" className={styles.card}>
             {data.map((card, i) => (
                 <div
-                    className={`flex-container row mb-2 
-                    ${i % 2 === 0 ? "row" : "row-reverse"}`}
+                    className={`flex-container mb-2 
+                    ${i % 2 === 0 ? "row" : "works"}
+                    `}
                     key={[i]}
                 >
                     <div className="col-5">
@@ -75,7 +76,7 @@ const HomePageCard = () => {
                     <div className="col-7">
                         <div className={styles.content}>
                             <h3 className={styles.card_title}>{card.title}</h3>
-                            <p>{card.location}</p>
+                            <p className={styles.location}>{card.location}</p>
                             <div className={styles.final_bids}>
                                 <button className={styles.danger_btn}>
                                     Currnent Bid: € {card.currentBid}.00

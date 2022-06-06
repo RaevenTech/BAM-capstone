@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Modal, Button, Form } from "react-bootstrap";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
@@ -77,9 +78,11 @@ const RegisterListing = () => {
                     <Button variant="secondary" onClick={handleClose}>
                         Cancel
                     </Button>
-                    <Button variant="primary" onClick={handleClose}>
-                        Submit
-                    </Button>
+                    <Link to="/sellerPage">
+                        <Button variant="primary" onClick={handleClose}>
+                            Submit
+                        </Button>
+                    </Link>
                 </Modal.Footer>
             </Modal>
         </div>

@@ -31,21 +31,25 @@ function NavbarLayout() {
                 onHide={() => setSmShow(false)}
                 aria-labelledby="example-modal-sizes-title-sm"
             >
-                <Modal.Header closeButton>Login</Modal.Header>
-                <Modal.Body>
+                <Modal.Header className={styles.login} closeButton>
+                    Login
+                </Modal.Header>
+                <Modal.Body className={styles.login_body}>
                     <Form>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Email address</Form.Label>
+                        <Form.Group className="mb-1" controlId="formBasicEmail">
+                            <Form.Label className="mb-1">
+                                Email address
+                            </Form.Label>
                             <Form.Control
                                 type="email"
                                 placeholder="Enter email"
                             />
                         </Form.Group>
                         <Form.Group
-                            className="mb-3"
+                            className="mb-1"
                             controlId="formBasicPassword"
                         >
-                            <Form.Label>Password</Form.Label>
+                            <Form.Label className="mb-1">Password</Form.Label>
                             <Form.Control
                                 type="password"
                                 placeholder="Password"
