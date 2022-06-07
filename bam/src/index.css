@@ -15,4 +15,18 @@ body {
   height: 100%;
   font-family: 'Poppins', sans-serif;
 }
+/*-------- color pallet ---------*/
+.first-color { 
+	background: #222831; 
+}
+.second-color { 
+	background: #2d4059; 
+}
+.third-color { 
+	background: #ff5722; 
+}
+.fourth-color { 
+	background: #eeeeee; 
+}
+/*-------- color pallet ---------*/
 
