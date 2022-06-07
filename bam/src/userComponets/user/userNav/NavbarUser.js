@@ -1,20 +1,23 @@
 import React from "react";
 import styles from "./NavbarUser.module.css";
 import { FaUserCircle } from "react-icons/fa";
+import logo from "../../../assets/bam-png.png";
 
 const NavbarUser = () => {
     return (
         <>
             <div className={styles.navbar}>
-                <img src="" alt="logo" />
-                <div className={styles.nav_links}>
-                    <ul className={styles.ul}>
-                        <li className={styles.li}>Home</li>
-                        <li>Log Out</li>
-                    </ul>
+                <div className={styles.logo}>
+                    <img className={styles.img} src={logo} alt="logo" />
                 </div>
-                <div className={styles.userId}>
-                    User Name <FaUserCircle />
+
+                <div className={styles.user_profile}>
+                    <div className={styles.userId}>
+                        User Name{" "}
+                        <span className={styles.user_icon}>
+                            <FaUserCircle />
+                        </span>
+                    </div>
                 </div>
             </div>
         </>
