@@ -12,6 +12,7 @@
         "price": 10,
         "currentBid": 15,
         "closingBid": 20,
+        "closingDate": "2019-12-31",
         "description": "volcanic islands perfect for adventure seekers",
         "url": "https://www.euronews.com/story/2019/12/01/volcanic-islands-perfect-adventure-seekers-sao-miguel-island-azores-europe-120119"
     },
@@ -28,6 +29,7 @@
         "price": 15,
         "currentBid": 111,
         "closingBid": 20,
+        "closingDate": "2019-12-31",
         "description":
             "Welcome to one of the most wonderful regions of Portugal with a mild and sunny climate all year round!",
         "url": "https://www.nomadspain.com/beaches/algarve-beaches-in-portugal-best-family-destinations-in-europe-copyright-nomad-soul-european-best-destinations.html"
@@ -45,6 +47,7 @@
         "price": 25,
         "currentBid": 67,
         "closingBid": 20,
+        "closingDate": "2019-12-31",
         "description":
             "Croatian gem is one of the most stunning cities on the Dalmatian Coast",
         "url": "https://www.planetware.com/wpimages/2019/02/europe-top-places-to-visit-summer-dubrovnik-croatia.jpg"
@@ -62,6 +65,7 @@
         "price": 20,
         "currentBid": 35,
         "closingBid": 20,
+        "closingDate": "2019-12-31",
         "description":
             "where nature meets your soul, explore the wonders of the forest",
         "url": "https://www.tripadvisor.com/Attraction_Review-g187870-d125909-Reviews-Mont_Blanc_Mountain_Resort-Mont_Blanc_France.html"
@@ -79,6 +83,7 @@
         "price": 40,
         "currentBid": 67,
         "closingBid": 20,
+        "closingDate": "2019-12-31",
         "description":
             "Truly unique environment in which to relax and unwind",
         "url": "https://www.airbnb.com/rooms/14087"
@@ -96,6 +101,7 @@
         "price": 67,
         "currentBid": 35,
         "closingBid": 20,
+        "closingDate": "2019-12-31",
         "description":
             "Colorful fields of greens and flowers, blue skies juxtaposed against the Blue Lagoon healing waters",
         "url": "https://www.tripadvisor.com/Attraction_Review-g187870-d125909-Reviews-Mont_Blanc_Mountain_Resort-Mont_Blanc_France.html"
