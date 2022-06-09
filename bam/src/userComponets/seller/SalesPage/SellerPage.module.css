@@ -60,10 +60,10 @@
 .auction_body {
     display:grid;
     grid-template-columns: repeat(3,1fr);
-    gap:2rem;
+    gap:1.5rem;
     padding: 2rem;
     background: #222831;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 10px;
 
 }
 .auctions {

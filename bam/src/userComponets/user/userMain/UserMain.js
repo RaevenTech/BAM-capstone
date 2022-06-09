@@ -14,22 +14,26 @@ const UserMain = () => {
                     </ul>
                 </div>
             </div>
-            <div className={styles.active_bid}>
-                {data.map((card, i) => {
-                    return (
-                        <div key={[i]} className={styles.bid_card}>
-                            <img
-                                className={styles.bid_image}
-                                src={card.image}
-                                alt=""
-                            />
-                            <h3 className={styles.bid_title}>{card.title}</h3>
-                            <p className={styles.bid_location}>
-                                {card.location}
-                            </p>
-                        </div>
-                    );
-                })}
+            <div className="container-fluid">
+                <div className={styles.active_bid}>
+                    {data.map((card, i) => {
+                        return (
+                            <div key={[i]} className={styles.bid_card}>
+                                <img
+                                    className={styles.bid_image}
+                                    src={card.image}
+                                    alt=""
+                                />
+                                <h3 className={styles.bid_title}>
+                                    {card.title}
+                                </h3>
+                                <p className={styles.bid_location}>
+                                    {card.location}
+                                </p>
+                            </div>
+                        );
+                    })}
+                </div>
             </div>
         </div>
     );

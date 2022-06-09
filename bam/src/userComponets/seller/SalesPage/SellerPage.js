@@ -24,7 +24,7 @@ const SellerPage = () => {
                     </ul>
                 </div>
             </div>
-            <div className="container">
+            <div className="container-fluid">
                 <h4 className={styles.active_auction_list}>Active Auctions</h4>
                 <div className={styles.auction_body}>
                     {data.map((auction, i) => {
