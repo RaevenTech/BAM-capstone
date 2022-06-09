@@ -1,17 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./SellerPage.module.css";
-import data from "../../data/data.json";
-import NavbarUser from "../user/userNav/NavbarUser";
-import FooterLayout from "../../homeComponents/footer/FooterLayout";
-import SalesHistory from "./history/SalesHistory";
+import data from "../../../data/data.json";
+import NavbarUser from "../../user/userNav/NavbarUser";
+import FooterLayout from "../../../homeComponents/footer/FooterLayout";
+import SalesHistory from "../history/SalesHistory";
 
 const SellerPage = () => {
     return (
         <div className={styles.main}>
             <NavbarUser />
             <div className={styles.dashboard}>
-                <h2 className={styles.header}> Auction Dashboard </h2>
+                <h2 className={styles.header}> Auctioneer Dashboard </h2>
                 <div>
                     <ul className={styles.ul}>
                         <Link className={styles.li_link} to="">

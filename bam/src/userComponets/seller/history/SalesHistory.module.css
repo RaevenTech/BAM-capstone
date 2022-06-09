@@ -15,4 +15,22 @@
 
 .auction_history {
     background-color: #222831;
+    margin-bottom: 20px;
+    ;
+}
+.history_title {
+    color: #ff5722;
+    margin-top: 2rem;
+    
+}
+
+.list_item {
+    margin: 0.5rem 1.5rem;
+    color:#222831 ;
+    background-color: #eeeeee;
+    display: flex;
+    flex-direction: column;
+    
+    
+
 }

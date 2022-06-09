@@ -1,7 +1,7 @@
 import "./App.css";
 import MainLayout from "./homeComponents/main/MainLayout";
 import UserPage from "./userComponets/user/userPage/UserPage";
-import SellerPage from "./userComponets/seller/SellerPage";
+import SellerPage from "./userComponets/seller/SalesPage/SellerPage";
 import { Routes, Route } from "react-router-dom";
 import NotFound from "./error/NotFound";
 
