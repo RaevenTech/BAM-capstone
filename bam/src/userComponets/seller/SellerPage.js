@@ -6,10 +6,10 @@ import FooterLayout from "../../homeComponents/footer/FooterLayout";
 
 const SellerPage = () => {
     return (
-        <>
+        <div className={styles.main}>
             <NavbarUser />
             <div className={styles.dashboard}>
-                <h2 className={styles.header}> Your Dashboard </h2>
+                <h2 className={styles.header}> Auction Dashboard </h2>
                 <div>
                     <ul className={styles.ul}>
                         <li className={styles.li}>Home</li>
@@ -17,9 +17,26 @@ const SellerPage = () => {
                     </ul>
                 </div>
             </div>
-            <div className={styles.seller_main}></div>;
+            <div className="container">
+                <h4 className={styles.active_auction_list}>Active Auctions</h4>
+                <div className={styles.auction_body}>
+                    {data.map((auction) => {
+                        return (
+                            <div className={styles.auctions}>
+                                <img
+                                    className={styles.auction_image}
+                                    src={auction.image}
+                                    alt=""
+                                />
+                                <h3 className={styles.auction_title}>Title</h3>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+            ;
             <FooterLayout />
-        </>
+        </div>
     );
 };
 

@@ -5,8 +5,15 @@
         "title": "European adventure destination",
         "location": "Sao Miguel Island, part of the Azores",
         "maxGuests": 0,
+        "avalibility":{
+            "startDate": "2019-12-01",
+            "endDate": "2019-12-31"
+            },
+        "price": 10,
         "currentBid": 15,
-        "description": "volcanic islands perfect for adventure seekers"
+        "closingBid": 20,
+        "description": "volcanic islands perfect for adventure seekers",
+        "url": "https://www.euronews.com/story/2019/12/01/volcanic-islands-perfect-adventure-seekers-sao-miguel-island-azores-europe-120119"
     },
     {
         "id": "2",
@@ -14,9 +21,16 @@
         "title": "Beautiful Beaches and Blue water",
         "location": "Algarve,Portugal",
         "maxGuests": 0,
+        "avalibility":{
+            "startDate": "2019-12-01",
+            "endDate": "2019-12-31"
+            },
+        "price": 15,
         "currentBid": 111,
+        "closingBid": 20,
         "description":
-            "Welcome to one of the most wonderful regions of Portugal with a mild and sunny climate all year round!"
+            "Welcome to one of the most wonderful regions of Portugal with a mild and sunny climate all year round!",
+        "url": "https://www.nomadspain.com/beaches/algarve-beaches-in-portugal-best-family-destinations-in-europe-copyright-nomad-soul-european-best-destinations.html"
     },
     {
         "id": "3",
@@ -24,9 +38,16 @@
         "title": "Dubrovnik's old-world beauty",
         "location": "Dubrovnik, Croatia",
         "maxGuests": 0,
+        "avalibility":{
+            "startDate": "2019-12-01",
+            "endDate": "2019-12-31"
+            },
+        "price": 25,
         "currentBid": 67,
+        "closingBid": 20,
         "description":
-            "Croatian gem is one of the most stunning cities on the Dalmatian Coast"
+            "Croatian gem is one of the most stunning cities on the Dalmatian Coast",
+        "url": "https://www.planetware.com/wpimages/2019/02/europe-top-places-to-visit-summer-dubrovnik-croatia.jpg"
     },
     {
         "id": "4",
@@ -34,9 +55,16 @@
         "title": "Relax in the mountains",
         "location": "french, alpes",
         "maxGuests": 0,
+        "avalibility":{
+            "startDate": "2019-12-01",
+            "endDate": "2019-12-31"
+            },
+        "price": 20,
         "currentBid": 35,
+        "closingBid": 20,
         "description":
-            "where nature meets your soul, explore the wonders of the forest"
+            "where nature meets your soul, explore the wonders of the forest",
+        "url": "https://www.tripadvisor.com/Attraction_Review-g187870-d125909-Reviews-Mont_Blanc_Mountain_Resort-Mont_Blanc_France.html"
     },
     {
         "id": "5",
@@ -44,9 +72,16 @@
         "title": "Scotland HighLands, United Kingdom",
         "location": "Dubrovnik, Croatia",
         "maxGuests": 0,
+        "avalibility":{
+            "startDate": "2019-12-01",
+            "endDate": "2019-12-31"
+            },
+        "price": 40,
         "currentBid": 67,
+        "closingBid": 20,
         "description":
-            "Yruly unique environment in which to relax and unwind"
+            "Truly unique environment in which to relax and unwind",
+        "url": "https://www.airbnb.com/rooms/14087"
     },
     {
         "id": "6",
@@ -54,8 +89,15 @@
         "title": "Mother Nature's works of art",
         "location": "Reykjavik, Iceland",
         "maxGuests": 0,
+        "avalibility":{
+            "startDate": "2019-12-01",
+            "endDate": "2019-12-31"
+            },
+        "price": 67,
         "currentBid": 35,
+        "closingBid": 20,
         "description":
-            "Colorful fields of greens and flowers, blue skies juxtaposed against the Blue Lagoon healing waters"
+            "Colorful fields of greens and flowers, blue skies juxtaposed against the Blue Lagoon healing waters",
+        "url": "https://www.tripadvisor.com/Attraction_Review-g187870-d125909-Reviews-Mont_Blanc_Mountain_Resort-Mont_Blanc_France.html"
     }
 ]
