@@ -13,15 +13,15 @@
 }
 /*-------- color pallet ---------*/
 
-.auction_history {
-    background-color: #222831;
-    margin-bottom: 20px;
-    ;
-}
 .history_title {
     color: #ff5722;
     margin-top: 2rem;
     
+}
+.auction_history {
+    background-color: #222831;
+    margin-bottom: 20px;
+    ;
 }
 
 .list_item {

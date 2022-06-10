@@ -1,0 +1,43 @@
+/*-------- color pallet ---------*/
+.first-color { 
+	background: #222831; 
+}
+.second-color { 
+	background: #2d4059; 
+}
+.third-color { 
+	background: #ff5722; 
+}
+.fourth-color { 
+	background: #eeeeee; 
+}
+/*-------- color pallet ---------*/
+
+
+.fav_title {
+    color:#ff5722;
+}
+.watch_list {
+    background-color: #222831;
+    padding:1rem;
+    border-radius: 10px;
+}
+.fav_list {
+    display:flex;
+    flex-direction: row;
+    height:200px;
+    background:#2d4059;
+    color: #eeeeee;
+    padding: 1rem;
+    margin: 1rem;
+}
+.fav_image {
+    width:250px;
+    height: auto;
+    
+}
+.fav_img {
+    max-width: 100%;
+    max-height: auto;
+    object-fit: contain;
+}
