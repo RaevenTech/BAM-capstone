@@ -5,6 +5,10 @@ import React, { useState } from "react";
 
 function NavbarLayout() {
     const [smShow, setSmShow] = useState(false);
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    function login() {}
 
     return (
         <div className={styles.container}>
@@ -41,6 +45,10 @@ function NavbarLayout() {
                                 Email address
                             </Form.Label>
                             <Form.Control
+                                value={email}
+                                onChange={(email) => {
+                                    setEmail(email);
+                                }}
                                 type="email"
                                 placeholder="Enter email"
                             />
@@ -51,10 +59,17 @@ function NavbarLayout() {
                         >
                             <Form.Label className="mb-1">Password</Form.Label>
                             <Form.Control
+                                value={password}
+                                onChange={(password) => {
+                                    setPassword(password);
+                                }}
                                 type="password"
                                 placeholder="Password"
                             />
                         </Form.Group>
+                        <button className={styles.login_submit} onClick={login}>
+                            Go
+                        </button>
                     </Form>
                 </Modal.Body>
             </Modal>
