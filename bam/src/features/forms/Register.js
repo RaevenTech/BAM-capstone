@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Modal, Button, Form } from "react-bootstrap";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
+import styles from "./Register.module.css";
 
 const Register = () => {
     const [show, setShow] = useState(false);
@@ -13,15 +14,18 @@ const Register = () => {
 
     return (
         <div>
-            <Button onClick={handleShow}>Register to Bid</Button>
+            <Button className={styles.register_user_btn} onClick={handleShow}>
+                Register to Bid
+            </Button>
             <Modal
+                className={styles.modal_body}
                 show={show}
                 onHide={handleClose}
                 backdrop="static"
                 keyboard={false}
                 centered
             >
-                <Modal.Header closeButton>
+                <Modal.Header className={styles.modal_header_close} closeButton>
                     <Modal.Title>Register to bid</Modal.Title>
                 </Modal.Header>
 

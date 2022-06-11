@@ -1,0 +1,22 @@
+/*-------- color pallet ---------*/
+.first-color { 
+	background: #222831; 
+}
+.second-color { 
+	background: #2d4059; 
+}
+.third-color { 
+	background: #ff5722; 
+}
+.fourth-color { 
+	background: #eeeeee; 
+}
+/*-------- color pallet ---------*/
+
+.modal_body {
+    background:#2d4059 ;
+}
+.modal_header_close {
+    color:#ff5722;
+    background: #222831;
+}
