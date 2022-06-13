@@ -5,6 +5,7 @@ import styles from "./ResgisterListing.module.css";
 
 const RegisterListing = () => {
     const [show, setShow] = useState(false);
+    const [title, setTitle] = useState("");
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -28,8 +29,12 @@ const RegisterListing = () => {
                         <Form.Group className="mb-3">
                             <Form.Label>Title</Form.Label>
                             <Form.Control
+                                value={title}
                                 type="text"
                                 placeholder="* Apartment with amazing sea views"
+                                onChange={(title) => {
+                                    setTitle(title);
+                                }}
                                 required
                             />
                             <Form.Label>Location</Form.Label>

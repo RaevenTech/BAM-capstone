@@ -4,10 +4,37 @@ import { Modal, Button, Form } from "react-bootstrap";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import styles from "./Register.module.css";
+import { nanoid } from "nanoid";
+import { db } from "../../utils/Firebase";
+
+import { doc, setDoc } from "firebase/firestore";
 
 const Register = () => {
     const [show, setShow] = useState(false);
     const [value, setValue] = useState();
+    const [name, setName] = useState("");
+    const [surname, setSurname] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    function handleSubmit() {
+        const userId = nanoid();
+        console.log("sub-func");
+        // submit data
+        setDoc(doc(db, "users", "user"), {
+            id: userId,
+            name: name,
+            surname: surname,
+            email: email,
+            password: password,
+        })
+            .then(() => {
+                console.log("data submitted");
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -35,14 +62,22 @@ const Register = () => {
                         <Form.Group className="mb-3">
                             <Form.Label>First Name</Form.Label>
                             <Form.Control
+                                value={name}
                                 type="text"
                                 placeholder=" First Name"
+                                onChange={(name) => {
+                                    setName(name);
+                                }}
                                 required
                             />
                             <Form.Label>Last Name</Form.Label>
                             <Form.Control
+                                value={surname}
                                 type="text"
                                 placeholder="Last Name"
+                                onChange={(surname) => {
+                                    setSurname(surname);
+                                }}
                                 required
                             />
                             <Form.Label>Phone</Form.Label>
@@ -57,8 +92,12 @@ const Register = () => {
                             />
                             <Form.Label>Email address</Form.Label>
                             <Form.Control
+                                value={email}
                                 type="email"
                                 placeholder="Enter valid email"
+                                onChange={(email) => {
+                                    setEmail(email);
+                                }}
                                 required
                             />
                         </Form.Group>
@@ -68,8 +107,12 @@ const Register = () => {
                         >
                             <Form.Label>Password</Form.Label>
                             <Form.Control
+                                value={password}
                                 type="password"
                                 placeholder="Password"
+                                onChange={(password) => {
+                                    setPassword(password);
+                                }}
                                 required
                             />
                         </Form.Group>
@@ -103,12 +146,12 @@ const Register = () => {
                     </Button>
                 </Modal.Footer>
                 <Link to="/Userpage">
-                    <Button variant="primary" onClick={handleClose}>
+                    <Button variant="primary" onClick={handleSubmit}>
                         Bidding?
                     </Button>
                 </Link>
                 <Link to="/sellerPage">
-                    <Button variant="primary" onClick={handleClose}>
+                    <Button variant="primary" onClick={handleSubmit}>
                         Selling?
                     </Button>
                 </Link>
