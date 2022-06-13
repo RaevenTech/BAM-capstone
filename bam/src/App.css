@@ -1,4 +1,17 @@
-
+/*-------- color pallet ---------*/
+.first-color { 
+	background: #222831; 
+}
+.second-color { 
+	background: #2d4059; 
+}
+.third-color { 
+	background: #ff5722; 
+}
+.fourth-color { 
+	background: #eeeeee; 
+}
+/*-------- color pallet ---------*/
 
 
 .App {
@@ -9,5 +22,14 @@
   display:flex;
   flex-direction: row-reverse;
 }
+.close {
+  color: #ff5722; 
+  opacity: 1;
+  text-shadow: none;
+}
+.close:hover {
+  background-color: #ff5722;
+  border-radius: 50%;
 
+}
 

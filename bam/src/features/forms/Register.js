@@ -101,12 +101,17 @@ const Register = () => {
                     <Button variant="secondary" onClick={handleClose}>
                         Cancel
                     </Button>
-                    <Link to="/Userpage">
-                        <Button variant="primary" onClick={handleClose}>
-                            Get started
-                        </Button>
-                    </Link>
                 </Modal.Footer>
+                <Link to="/Userpage">
+                    <Button variant="primary" onClick={handleClose}>
+                        Bidding?
+                    </Button>
+                </Link>
+                <Link to="/sellerPage">
+                    <Button variant="primary" onClick={handleClose}>
+                        Selling?
+                    </Button>
+                </Link>
             </Modal>
         </div>
     );

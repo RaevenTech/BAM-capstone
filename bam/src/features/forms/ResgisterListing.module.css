@@ -1,0 +1,32 @@
+/*-------- color pallet ---------*/
+.first-color { 
+	background: #222831; 
+}
+.second-color { 
+	background: #2d4059; 
+}
+.third-color { 
+	background: #ff5722; 
+}
+.fourth-color { 
+	background: #eeeeee; 
+}
+/*-------- color pallet ---------*/
+
+.submit_btn {
+    border: 1px solid #eeeeee;
+    background-color: #ff5722;
+    
+}
+.submit_btn:hover {
+    background-color: transparent;
+    color:#ff5722;
+    border: 1px solid #ff5722;
+}
+.cancel_btn {
+    border: #eeeeee;
+}
+.cancel_btn:hover {
+    color: #ff5722;
+    border: 1px solid #ff5722;
+}

@@ -5,6 +5,7 @@ import data from "../../../data/data.json";
 import NavbarUser from "../../user/userNav/NavbarUser";
 import FooterLayout from "../../../homeComponents/footer/FooterLayout";
 import SalesHistory from "../history/SalesHistory";
+import RegisterListing from "../../../features/forms/RegisterListing";
 
 const SellerPage = () => {
     return (
@@ -20,7 +21,9 @@ const SellerPage = () => {
                         <Link className={styles.li_link} to="">
                             <li className={styles.li}>Log out</li>
                         </Link>
-                        <li className={styles.li}>New listing</li>
+                        <li className={styles.li_btn}>
+                            <RegisterListing />
+                        </li>
                     </ul>
                 </div>
             </div>

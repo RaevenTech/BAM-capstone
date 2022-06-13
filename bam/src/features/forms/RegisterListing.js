@@ -1,19 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Modal, Button, Form } from "react-bootstrap";
-import PhoneInput from "react-phone-number-input";
-import "react-phone-number-input/style.css";
+import styles from "./ResgisterListing.module.css";
 
 const RegisterListing = () => {
     const [show, setShow] = useState(false);
-    const [value, setValue] = useState();
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
     return (
         <div>
-            <Button onClick={handleShow}>Sell on auction</Button>
+            <Button onClick={handleShow}>Add listing</Button>
             <Modal
                 show={show}
                 onHide={handleClose}
@@ -28,58 +26,66 @@ const RegisterListing = () => {
                 <Modal.Body>
                     <Form>
                         <Form.Group className="mb-3">
-                            <Form.Label>First Name</Form.Label>
-                            <Form.Control type="text" placeholder="Name" />
-                            <Form.Label>Last Name</Form.Label>
-                            <Form.Control type="text" placeholder="Name" />
-                            <Form.Label>Phone</Form.Label>
-                            <Form.Control type="number" placeholder="phon" />
-                            <PhoneInput
-                                placeholder="Enter phone number"
-                                value={value}
-                                onChange={setValue}
-                            />
-                            <Form.Label>Email address</Form.Label>
+                            <Form.Label>Title</Form.Label>
                             <Form.Control
-                                type="email"
-                                placeholder="Enter email"
+                                type="text"
+                                placeholder="* Apartment with amazing sea views"
+                                required
+                            />
+                            <Form.Label>Location</Form.Label>
+                            <Form.Control
+                                type="text"
+                                placeholder="* NorthPole, Artic circle"
+                                required
+                            />
+                            <Form.Label>Location</Form.Label>
+                            <Form.Control
+                                type="text"
+                                placeholder="* NorthPole, Artic circle"
+                                required
+                            />
+                            <Form.Label>Starting Price in € </Form.Label>
+                            <Form.Control
+                                type="text"
+                                placeholder="* 99"
+                                required
+                            />
+                            <Form.Label>Url link</Form.Label>
+                            <Form.Control
+                                type="url"
+                                placeholder="* url: https//web-address"
+                                required
                             />
                         </Form.Group>
-                        <Form.Group
-                            className="mb-3"
-                            controlId="formBasicPassword"
-                        >
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control
-                                type="password"
-                                placeholder="Password"
-                            />
-                        </Form.Group>
-                        <Form.Group
-                            className="mb-3"
-                            controlId="formBasicPassword2"
-                        >
-                            <Form.Label> Verify Password</Form.Label>
-                            <Form.Control
-                                type="password"
-                                placeholder="Password"
-                            />
+                        <Form.Group controlId="formFile" className="mb-3">
+                            <Form.Label>Upload image</Form.Label>
+                            <Form.Control type="file" accept="image/*" />
                         </Form.Group>
                         <Form.Group
                             className="mb-3"
                             controlId="formBasicCheckbox"
                         >
-                            <Form.Check type="checkbox" label="Check me out" />
+                            <Form.Check
+                                type="checkbox"
+                                label=" * Agree and have read the Terms and conditions"
+                            />
                         </Form.Group>
                     </Form>
                 </Modal.Body>
 
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
+                    <Button
+                        className={styles.cancel_btn}
+                        variant="secondary"
+                        onClick={handleClose}
+                    >
                         Cancel
                     </Button>
                     <Link to="/sellerPage">
-                        <Button variant="primary" onClick={handleClose}>
+                        <Button
+                            className={styles.submit_btn}
+                            onClick={handleClose}
+                        >
                             Submit
                         </Button>
                     </Link>
