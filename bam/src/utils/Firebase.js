@@ -1,6 +1,7 @@
-// Real time data base url - https://console.firebase.google.com/u/0/project/bam-capstone/database/bam-capstone-default-rtdb/data/~2F
+/*/ Real time data base url - https://console.firebase.google.com/u/0/project/bam-capstone/database/bam-capstone-default-rtdb/data/~2F
 
 import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -14,11 +15,12 @@ const firebaseConfig = {
     projectId: process.env.REACT_APP__PROJECTID,
     storageBucket: process.env.REACT_APP_STORAGEBUCKET,
     messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
-    appId: process.env.REACT_APP_MEASUREMENTID,
+    appId: process.env.REACT_APP_APPID,
     measurementId: process.env.REACT_APP_MEASUREMENTID,
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
-export const db = getFirestore(app);
+export const db = getFirestore(app);*/

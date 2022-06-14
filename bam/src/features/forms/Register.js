@@ -4,9 +4,9 @@ import { Modal, Button, Form } from "react-bootstrap";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import styles from "./Register.module.css";
-import { nanoid } from "nanoid";
-import { db } from "../../utils/Firebase";
-import { doc, setDoc } from "firebase/firestore";
+//import { nanoid } from "nanoid";
+//import { db } from "../../utils/Firebase";
+//import { doc, setDoc } from "firebase/firestore";
 
 const Register = () => {
     const [show, setShow] = useState(false);
@@ -16,7 +16,7 @@ const Register = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    function handleSubmit() {
+    /* function handleSubmit() {
         const userId = nanoid();
         console.log("sub-func");
         // submit data
@@ -33,8 +33,8 @@ const Register = () => {
             .catch((error) => {
                 console.log(error);
             });
-    }
-
+    }*/
+    const handleSubmit = () => setShow(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
