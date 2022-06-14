@@ -2,6 +2,7 @@ import { GiBangingGavel } from "react-icons/gi";
 import { Button, Nav, Navbar, Modal, Form } from "react-bootstrap";
 import styles from "./NavbarLayout.module.css";
 import React, { useState } from "react";
+import { nanoid } from "@reduxjs/toolkit";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../utils/Firebase";
 
@@ -10,17 +11,19 @@ function NavbarLayout() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    function login() {
-        addDoc(collection(db, "user", "login"), {
-            email: email,
-            password: password,
-        })
-            .then(() => {
-                console.log("logged in");
-            })
-            .catch((error) => {
-                console.log(error);
+    async function login(e) {
+        try {
+            e.preventDefault();
+            console.log("we are here");
+            await addDoc(collection(db, "users"), {
+                id: nanoid(),
+                email: email,
+                password: password,
             });
+            console.log("logged in");
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     return (
@@ -49,7 +52,11 @@ function NavbarLayout() {
                     Login
                 </Modal.Header>
                 <Modal.Body className={styles.login_body}>
-                    <Form>
+                    <Form
+                        onSubmit={(e) => {
+                            login(e);
+                        }}
+                    >
                         <Form.Group className="mb-1" controlId="formBasicEmail">
                             <Form.Label className="mb-1">
                                 Email address
@@ -77,9 +84,11 @@ function NavbarLayout() {
                                 placeholder=""
                             />
                         </Form.Group>
-                        <button className={styles.login_submit} onClick={login}>
-                            Go
-                        </button>
+                        <input
+                            className={styles.login_submit}
+                            value="GO"
+                            type="submit"
+                        />
                     </Form>
                 </Modal.Body>
             </Modal>
