@@ -2,13 +2,26 @@ import { GiBangingGavel } from "react-icons/gi";
 import { Button, Nav, Navbar, Modal, Form } from "react-bootstrap";
 import styles from "./NavbarLayout.module.css";
 import React, { useState } from "react";
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "../../utils/Firebase";
 
 function NavbarLayout() {
     const [smShow, setSmShow] = useState(false);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    function login() {}
+    function login() {
+        addDoc(collection(db, "user", "login"), {
+            email: email,
+            password: password,
+        })
+            .then(() => {
+                console.log("logged in");
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }
 
     return (
         <div className={styles.container}>
@@ -19,10 +32,7 @@ function NavbarLayout() {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ml-auto">
-                        {/*<Nav.Link href="#home"></Nav.Link>*/}
-                        {/*<Nav.Link href="#link"></Nav.Link>*/}
-                    </Nav>
+                    <Nav className="ml-auto"></Nav>
                     <Button onClick={() => setSmShow(true)} className="me-2">
                         Login
                     </Button>
@@ -46,8 +56,8 @@ function NavbarLayout() {
                             </Form.Label>
                             <Form.Control
                                 value={email}
-                                onChange={(email) => {
-                                    setEmail(email);
+                                onChange={(e) => {
+                                    setEmail(e.target.value);
                                 }}
                                 type="email"
                                 placeholder="Enter email"
@@ -60,11 +70,11 @@ function NavbarLayout() {
                             <Form.Label className="mb-1">Password</Form.Label>
                             <Form.Control
                                 value={password}
-                                onChange={(password) => {
-                                    setPassword(password);
+                                onChange={(e) => {
+                                    setPassword(e.target.value);
                                 }}
                                 type="password"
-                                placeholder="Password"
+                                placeholder=""
                             />
                         </Form.Group>
                         <button className={styles.login_submit} onClick={login}>

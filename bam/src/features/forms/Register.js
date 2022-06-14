@@ -6,12 +6,11 @@ import "react-phone-number-input/style.css";
 import styles from "./Register.module.css";
 import { nanoid } from "nanoid";
 import { db } from "../../utils/Firebase";
-
 import { doc, setDoc } from "firebase/firestore";
 
 const Register = () => {
     const [show, setShow] = useState(false);
-    const [value, setValue] = useState();
+    const [value, setValue] = useState("");
     const [name, setName] = useState("");
     const [surname, setSurname] = useState("");
     const [email, setEmail] = useState("");
