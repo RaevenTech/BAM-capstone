@@ -4,11 +4,15 @@ import { Modal, Button, Form } from "react-bootstrap";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import styles from "./Register.module.css";
-//import { nanoid } from "nanoid";
-//import { db } from "../../utils/Firebase";
-//import { doc, setDoc } from "firebase/firestore";
+//import { useDispatch } from "react-redux";
+import { nanoid } from "@reduxjs/toolkit";
+import { db } from "../../utils/Firebase";
+import { doc, setDoc } from "firebase/firestore";
+//import { postAdded } from "../../slices/postSlice";
 
 const Register = () => {
+    //const dispatch = useDispatch();
+
     const [show, setShow] = useState(false);
     const [value, setValue] = useState("");
     const [name, setName] = useState("");
@@ -16,11 +20,11 @@ const Register = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    /* function handleSubmit() {
+    function handleSubmit() {
         const userId = nanoid();
         console.log("sub-func");
         // submit data
-        setDoc(doc(db, "users", "user"), {
+        setDoc(doc(db, "users"), {
             id: userId,
             name: name,
             surname: surname,
@@ -33,8 +37,8 @@ const Register = () => {
             .catch((error) => {
                 console.log(error);
             });
-    }*/
-    const handleSubmit = () => setShow(false);
+    }
+
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
@@ -57,15 +61,19 @@ const Register = () => {
 
                 <Modal.Body>
                     {" "}
-                    <Form>
+                    <Form
+                        onsubmit={(e) => {
+                            handleSubmit(e);
+                        }}
+                    >
                         <Form.Group className="mb-3">
                             <Form.Label>First Name</Form.Label>
                             <Form.Control
                                 value={name}
                                 type="text"
                                 placeholder=" First Name"
-                                onChange={(name) => {
-                                    setName(name);
+                                onChange={(e) => {
+                                    setName(e.target.value);
                                 }}
                                 required
                             />
@@ -74,8 +82,8 @@ const Register = () => {
                                 value={surname}
                                 type="text"
                                 placeholder="Last Name"
-                                onChange={(surname) => {
-                                    setSurname(surname);
+                                onChange={(e) => {
+                                    setSurname(e.target.value);
                                 }}
                                 required
                             />
@@ -94,8 +102,8 @@ const Register = () => {
                                 value={email}
                                 type="email"
                                 placeholder="Enter valid email"
-                                onChange={(email) => {
-                                    setEmail(email);
+                                onChange={(e) => {
+                                    setEmail(e.target.value);
                                 }}
                                 required
                             />
@@ -109,8 +117,8 @@ const Register = () => {
                                 value={password}
                                 type="password"
                                 placeholder="Password"
-                                onChange={(password) => {
-                                    setPassword(password);
+                                onChange={(e) => {
+                                    setPassword(e.target.value);
                                 }}
                                 required
                             />
@@ -145,14 +153,18 @@ const Register = () => {
                     </Button>
                 </Modal.Footer>
                 <Link to="/Userpage">
-                    <Button variant="primary" onClick={handleSubmit}>
-                        Bidding?
-                    </Button>
+                    <input
+                        variant="primary"
+                        value="Bid "
+                        onClick={handleSubmit}
+                    />
                 </Link>
                 <Link to="/sellerPage">
-                    <Button variant="primary" onClick={handleSubmit}>
-                        Selling?
-                    </Button>
+                    <input
+                        variant="primary"
+                        value="seller"
+                        onClick={handleSubmit}
+                    />
                 </Link>
             </Modal>
         </div>
