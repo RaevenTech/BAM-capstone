@@ -14,8 +14,8 @@ function NavbarLayout() {
     async function login(e) {
         try {
             e.preventDefault();
-            console.log("we are here");
-            await addDoc(collection(db, "users"), {
+            console.log("login");
+            await addDoc(collection(db, "login"), {
                 id: nanoid(),
                 email: email,
                 password: password,

@@ -1,42 +1,40 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Modal, Button, Form } from "react-bootstrap";
-import PhoneInput from "react-phone-number-input";
+
 import "react-phone-number-input/style.css";
 import styles from "./Register.module.css";
 //import { useDispatch } from "react-redux";
 import { nanoid } from "@reduxjs/toolkit";
 import { db } from "../../utils/Firebase";
-import { doc, setDoc } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 //import { postAdded } from "../../slices/postSlice";
 
 const Register = () => {
     //const dispatch = useDispatch();
 
     const [show, setShow] = useState(false);
-    const [value, setValue] = useState("");
     const [name, setName] = useState("");
     const [surname, setSurname] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    function handleSubmit() {
+    // submit data
+    async function handleSubmit() {
         const userId = nanoid();
-        console.log("sub-func");
-        // submit data
-        setDoc(doc(db, "users"), {
-            id: userId,
-            name: name,
-            surname: surname,
-            email: email,
-            password: password,
-        })
-            .then(() => {
-                console.log("data submitted");
-            })
-            .catch((error) => {
-                console.log(error);
+        console.log("user reg");
+        try {
+            await addDoc(collection(db, "user"), {
+                id: userId,
+                name: name,
+                surname: surname,
+                email: email,
+                password: password,
             });
+            console.log("user reg success");
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     const handleClose = () => setShow(false);
@@ -92,13 +90,7 @@ const Register = () => {
                                 type="number"
                                 placeholder="Phone number"
                             />
-                            <PhoneInput
-                                placeholder="Enter phone number"
-                                value={value}
-                                onChange={(e) => {
-                                    setValue(e.target.value);
-                                }}
-                            />
+
                             <Form.Label>Email address</Form.Label>
                             <Form.Control
                                 value={email}
@@ -125,17 +117,7 @@ const Register = () => {
                                 required
                             />
                         </Form.Group>
-                        <Form.Group
-                            className="mb-3"
-                            controlId="formBasicPassword2"
-                        >
-                            <Form.Label> Verify Password</Form.Label>
-                            <Form.Control
-                                type="password"
-                                placeholder="Password"
-                                required
-                            />
-                        </Form.Group>
+
                         <Form.Group
                             className="mb-3"
                             controlId="formBasicCheckbox"
@@ -156,16 +138,16 @@ const Register = () => {
                 </Modal.Footer>
                 <Link to="/Userpage">
                     <input
-                        variant="primary"
-                        value="Bid "
-                        onClick={handleSubmit}
+                        className={styles.login_submit_bid}
+                        value="Bid"
+                        type="submit"
                     />
                 </Link>
                 <Link to="/sellerPage">
                     <input
-                        variant="primary"
-                        value="seller"
-                        onClick={handleSubmit}
+                        className={styles.login_submit_sell}
+                        value="post"
+                        type="submit"
                     />
                 </Link>
             </Modal>
