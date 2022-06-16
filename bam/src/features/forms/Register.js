@@ -95,7 +95,9 @@ const Register = () => {
                             <PhoneInput
                                 placeholder="Enter phone number"
                                 value={value}
-                                onChange={setValue}
+                                onChange={(e) => {
+                                    setValue(e.target.value);
+                                }}
                             />
                             <Form.Label>Email address</Form.Label>
                             <Form.Control

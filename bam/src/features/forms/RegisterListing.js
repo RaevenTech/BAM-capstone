@@ -43,10 +43,16 @@ const RegisterListing = () => {
                                 placeholder="* NorthPole, Artic circle"
                                 required
                             />
-                            <Form.Label>Location</Form.Label>
+                            <Form.Label>Avalibility</Form.Label>
+
                             <Form.Control
                                 type="text"
-                                placeholder="* NorthPole, Artic circle"
+                                placeholder="* From"
+                                required
+                            />
+                            <Form.Control
+                                type="text"
+                                placeholder="* To"
                                 required
                             />
                             <Form.Label>Starting Price in € </Form.Label>

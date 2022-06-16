@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from "react-redux";
 import {
     increase,
     decrease,
-    reset,
     increaseByAmount,
 } from "../../slices/counter/conterSlice";
 
@@ -48,7 +47,7 @@ const BidCounter = () => {
                 >
                     Bid
                 </button>
-                <button className={styles.reset_btn} onClick={reset}>
+                <button className={styles.reset_btn} onClick={resetAmount}>
                     Reset
                 </button>
             </div>
