@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./UserMain.module.css";
 import data from "../../../data/data.json";
+import BidCounter from "../../../features/counter/BidCounter";
 
 const UserMain = () => {
     return (
@@ -30,6 +31,7 @@ const UserMain = () => {
                                 <p className={styles.bid_location}>
                                     {card.location}
                                 </p>
+                                <BidCounter />
                             </div>
                         );
                     })}

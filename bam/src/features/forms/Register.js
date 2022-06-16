@@ -62,7 +62,7 @@ const Register = () => {
                 <Modal.Body>
                     {" "}
                     <Form
-                        onsubmit={(e) => {
+                        onSubmit={(e) => {
                             handleSubmit(e);
                         }}
                     >
