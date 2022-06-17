@@ -2,16 +2,16 @@ import { GiBangingGavel } from "react-icons/gi";
 import { Button, Nav, Navbar, Modal, Form } from "react-bootstrap";
 import styles from "./NavbarLayout.module.css";
 import React, { useState } from "react";
-import { nanoid } from "@reduxjs/toolkit";
-import { collection, addDoc } from "firebase/firestore";
-import { db } from "../../utils/Firebase";
+//import { nanoid } from "@reduxjs/toolkit";
+//import { collection, addDoc } from "firebase/database";
+//import { db } from "../../utils/Firebase";
 
 function NavbarLayout() {
     const [smShow, setSmShow] = useState(false);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    async function login(e) {
+    /*async function login(e) {
         try {
             e.preventDefault();
             console.log("login");
@@ -24,7 +24,7 @@ function NavbarLayout() {
         } catch (error) {
             console.log(error);
         }
-    }
+    }*/
 
     return (
         <div className={styles.container}>

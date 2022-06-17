@@ -1,13 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Modal, Button, Form } from "react-bootstrap";
-
 import "react-phone-number-input/style.css";
 import styles from "./Register.module.css";
-//import { useDispatch } from "react-redux";
-import { nanoid } from "@reduxjs/toolkit";
-import { db } from "../../utils/Firebase";
-import { set, ref } from "firebase/database";
+//import { useDispatch } from "react-redux";;
 //import { postAdded } from "../../slices/postSlice";
 
 const Register = () => {
