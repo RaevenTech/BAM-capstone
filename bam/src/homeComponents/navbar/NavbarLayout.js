@@ -25,6 +25,7 @@ function NavbarLayout() {
             console.log(error);
         }
     }*/
+    const login = () => setSmShow(false);
 
     return (
         <div className={styles.container}>
