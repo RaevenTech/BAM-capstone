@@ -7,7 +7,7 @@ import styles from "./Register.module.css";
 //import { useDispatch } from "react-redux";
 import { nanoid } from "@reduxjs/toolkit";
 import { db } from "../../utils/Firebase";
-import { collection, addDoc } from "firebase/firestore";
+import { set, ref } from "firebase/database";
 //import { postAdded } from "../../slices/postSlice";
 
 const Register = () => {
@@ -19,24 +19,7 @@ const Register = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    // submit data
-    async function handleSubmit() {
-        const userId = nanoid();
-        console.log("user reg");
-        try {
-            await addDoc(collection(db, "user"), {
-                id: userId,
-                name: name,
-                surname: surname,
-                email: email,
-                password: password,
-            });
-            console.log("user reg success");
-        } catch (error) {
-            console.log(error);
-        }
-    }
-
+    const handleSubmit = () => setShow(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
@@ -73,7 +56,6 @@ const Register = () => {
                                 onChange={(e) => {
                                     setName(e.target.value);
                                 }}
-                                required
                             />
                             <Form.Label>Last Name</Form.Label>
                             <Form.Control
@@ -83,7 +65,6 @@ const Register = () => {
                                 onChange={(e) => {
                                     setSurname(e.target.value);
                                 }}
-                                required
                             />
                             <Form.Label>Phone</Form.Label>
                             <Form.Control
@@ -99,7 +80,6 @@ const Register = () => {
                                 onChange={(e) => {
                                     setEmail(e.target.value);
                                 }}
-                                required
                             />
                         </Form.Group>
                         <Form.Group
@@ -114,7 +94,6 @@ const Register = () => {
                                 onChange={(e) => {
                                     setPassword(e.target.value);
                                 }}
-                                required
                             />
                         </Form.Group>
 
@@ -125,7 +104,6 @@ const Register = () => {
                             <Form.Check
                                 type="checkbox"
                                 label="Terms and conditions"
-                                required
                             />
                         </Form.Group>
                     </Form>
